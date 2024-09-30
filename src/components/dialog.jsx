@@ -14,6 +14,12 @@ const Dialog = () => {
   });
   const addtransaction = () => {
     dispatch({ type: "add-item", payload: newTransaction });
+    setNewTransaction({
+      id: Date.now(),
+      name: "",
+      price: 0,
+      type: "expense",
+    });
   };
   const handleChange = (event) => {
     const { name, value } = event.target;
